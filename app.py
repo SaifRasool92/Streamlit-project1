@@ -1,8 +1,30 @@
 import streamlit as st
 
-st.title("Hello, Streamlit!")
-st.write("This is a simple Streamlit app.")
+st.title("Quadrant Finder")
+st.write("Enter the x and y coordinates to find out which quadrant the point lies in.")
 
-number = st.slider("Pick a number", 0, 100)
-st.write(f"The square of {number} is {number ** 2}.")  # Corrected line
+x = st.number_input("Enter the x-axis value:", value=0)
+y = st.number_input("Enter the y-axis value:", value=0)
+
+if x > 0 and y > 0:
+    quadrant = "1st Quadrant"
+elif x < 0 and y > 0:
+    quadrant = "2nd Quadrant"
+elif x < 0 and y < 0:
+    quadrant = "3rd Quadrant"
+elif x > 0 and y < 0:
+    quadrant = "4th Quadrant"
+elif x == 0 and y > 0:
+    quadrant = "On the positive Y-axis"
+elif x == 0 and y < 0:
+    quadrant = "On the negative Y-axis"
+elif y == 0 and x > 0:
+    quadrant = "On the positive X-axis"
+elif y == 0 and x < 0:
+    quadrant = "On the negative X-axis"
+else:
+    quadrant = "At the Origin"
+
+st.write(f"The point ({x}, {y}) lies in the {quadrant}.")
+
 

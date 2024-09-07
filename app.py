@@ -15,15 +15,15 @@ elif x < 0 and y < 0:
 elif x > 0 and y < 0:
     quadrant = "4th Quadrant"
 elif x == 0 and y > 0:
-    quadrant = "On the positive Y-axis"
+    quadrant = "positive Y-axis"
 elif x == 0 and y < 0:
-    quadrant = "On the negative Y-axis"
+    quadrant = "negative Y-axis"
 elif y == 0 and x > 0:
-    quadrant = "On the positive X-axis"
+    quadrant = "positive X-axis"
 elif y == 0 and x < 0:
-    quadrant = "On the negative X-axis"
+    quadrant = "negative X-axis"
 else:
-    quadrant = "At the Origin"
+    quadrant = "Origin"
 
 st.write(f"The point ({x}, {y}) lies in the {quadrant}.")
 
